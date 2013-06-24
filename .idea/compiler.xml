@@ -2,6 +2,9 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
+    <excludeFromCompile>
+      <file url="file://$APPLICATION_HOME_DIR$/system/compiler/blocksmasherproject.5525d16c/.generated/Android_BuildConfig_Generator/BlockSmasher.6d0158da/production/com/thegavinkenna/blocksmasher/BuildConfig.java" />
+    </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />

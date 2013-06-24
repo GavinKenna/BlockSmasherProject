@@ -4,8 +4,38 @@
     <dataSet config="main" >
         <source path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res" >
             <file
+                name="ball"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\ball.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="brick"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\brick.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="paddle"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\paddle.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="paddlelong"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\paddlelong.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="paddlesmall"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\paddlesmall.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="star"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\star.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
@@ -24,9 +54,33 @@
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="activityb"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\layout\activityb.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="b"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\menu\b.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\values\dimens.xml"
+                qualifiers="" >
+                <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+            </file>
+            <file
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\values\strings.xml"
                 qualifiers="" >
-                <string name="app_name" >Block Smasher
+                <string name="action_settings" >Settings
+                </string>
+                <string name="app_name" >BlockSmasher
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="title_activity_b" >MainActivity
                 </string>
             </file>
             <file
@@ -50,6 +104,15 @@
 
                     <!-- All customizations that are NOT specific to a particular API-level can go here. -->
                 </style>
+            </file>
+            <file
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\values-sw600dp\dimens.xml"
+                qualifiers="sw600dp" />
+            <file
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\values-sw720dp-land\dimens.xml"
+                qualifiers="sw720dp-land" >
+                <dimen name="activity_horizontal_margin" >128dp
+                </dimen>
             </file>
             <file
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\values-v11\styles.xml"
