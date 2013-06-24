@@ -1,20 +1,21 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1372103113416 2941 785ea3d5873b2f122a9247f0cb863a6d19ae2bdf C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainGamePanel.class
+1372111731430 3281 67de0adf4d5922bd19b0eda9bc1268fd13d68e9c C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainGamePanel.class
 1372099218571 484258 bd6479f5dd592790607e0504e66e0f31c2b4d308 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\libs\android-support-v4.jar
 1372100844923 369 5af5da06e467e912690795c41a9963a89cee71d3 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\BuildConfig.class
 1372100844917 429 8ed93e71306c6c9ce87615565ca9c659c33a9a6d C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R$id.class
+1372111866862 2859 2f03412afd7c6b19ee21004bc0e660e6fdbe3325 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\Ball.class
 1372100844875 1161 4bfc7420dff26c2c1008952fa6b9a323ebd8bca3 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainActivity.class
 1372100844920 467 4cc90da46ce89e97628e785f87ee69dfd61fd3df C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R$style.class
 1372103056730 1736 6643902ed09528a9be517672c81c6a4442b5b6fe C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainGameThread.class
 1372100844921 797 87d0b21a58d5a8f93747180310dc0b78a1a0da6b C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R.class
 1372100844916 497 2425a54a255e5f65b32edbf5782fad8c651e7ae3 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R$dimen.class
 1372100844916 376 63a8c5706f5a8d3c4e997e2b1fbcf23a7315a397 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R$attr.class
-1372100844846 1822 4f80fc8157ef55638e79748357dd60bfadc87cba C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\Entity.class
+1372109558959 2157 79e2cd71ae08ebd68bf00ed62b6db922bca3de73 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\Entity.class
 1372100844917 627 f6d9bcb8267f0babd198e891178559ead0349e07 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R$drawable.class
 1372100844844 898 99f0cbd0271dd1960b7b00aec311346f38491994 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\Breakable.class
 1372100844920 548 e80835d0dc3050667ca2c38502dd9c84502fb875 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R$string.class
 1372100844918 435 50ba9c1679c043b7eda5cc799769dcb61cf10a89 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R$layout.class
 1372100844919 421 65a9acde1f487051a5398cb3b1f9465f6731bbb6 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R$menu.class
-1372100844911 1248 4fc064f8acf705f3c3ac69c027f79d36ce449bed C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\Paddle.class
+1372104038817 1385 1e8d68ff0f4355c403d291674dad1d517651f4db C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\Paddle.class

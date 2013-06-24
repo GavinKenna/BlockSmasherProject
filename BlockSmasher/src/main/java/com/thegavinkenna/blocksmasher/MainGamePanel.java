@@ -30,6 +30,7 @@ public class MainGamePanel extends SurfaceView implements
      */
 
     private Paddle paddle;
+    private Ball ball; //Will be made into an array soon, so that there can be loads of ball on scren at once when a certain gem is hit.
 
     public MainGamePanel(Context context) {
 
@@ -44,7 +45,8 @@ public class MainGamePanel extends SurfaceView implements
 
     public void Init()
     {
-        paddle = new Paddle(BitmapFactory.decodeResource(getResources(),R.drawable.paddle),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 40 /*Just a little off the ground*/);
+        paddle = new Paddle(BitmapFactory.decodeResource(getResources(),R.drawable.paddle),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 40 /*Just a little off the ground*/,Color.GREEN);
+        ball = new Ball(BitmapFactory.decodeResource(getResources(),R.drawable.ball),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 90 /*Just a little off the ground*/ ,Color.RED,9, 9);
     }
 
 
@@ -97,11 +99,12 @@ public class MainGamePanel extends SurfaceView implements
         // canvas.drawBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.droid_1),10,10,null);
         canvas.drawColor(Color.BLUE);
         this.paddle.draw(canvas);
+        this.ball.draw(canvas);
     }
 
     public void update()
     {
-
+        ball.update(this, paddle, 5f);
     }
 
 

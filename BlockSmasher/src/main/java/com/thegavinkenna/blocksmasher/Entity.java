@@ -7,6 +7,8 @@ package com.thegavinkenna.blocksmasher;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.LightingColorFilter;
 import android.graphics.Paint;
 
 /**
@@ -31,6 +33,8 @@ public abstract class Entity {
         this.x = x;
         this.y = y;
         this.paint = new Paint(col);
+        ColorFilter filter = new LightingColorFilter(col, 1);
+        paint.setColorFilter(filter);
     }
 
     public Bitmap getBitmap(){
@@ -63,6 +67,11 @@ public abstract class Entity {
 
     public void draw(Canvas canvas){
         canvas.drawBitmap(bitmap,x - (bitmap.getWidth() / 2), y - (bitmap.getHeight()/2),paint);
+    }
+
+    public Paint getPaint()
+    {
+        return paint;
     }
 
     public abstract void update();

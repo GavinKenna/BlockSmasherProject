@@ -13,7 +13,14 @@ public class Paddle extends Entity {
 
 
     public Paddle(Bitmap bitmap, int x, int y){
-        super( bitmap,  x,  y, Color.RED);
+        super( bitmap,  x,  y);
+
+        this.score = 0;
+        this.touched = false;
+    }
+
+    public Paddle(Bitmap bitmap, int x, int y, int col){
+        super( bitmap,  x,  y, col);
 
         this.score = 0;
         this.touched = false;
