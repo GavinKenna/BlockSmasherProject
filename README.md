@@ -11,6 +11,8 @@ and some more.
 
 Feel free to fork this repo, or even better yet take it and try add some features, I'll be happy to merge it in :)
 
+To jump straight into the main code, here's a link : https://github.com/GavinKenna/BlockSmasherProject/tree/master/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher
+
  
 <h2>Important source files</h2>
 MainGamePanel.java - This is where all of the init, update and draw code goes.<br />
