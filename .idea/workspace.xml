@@ -6,12 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c0ef78b-4a8b-4d74-9a91-19bddd89dab1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Brick.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Brick.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/ChangePaddleSizeGem.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/ChangePaddleSizeGem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Gem.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Gem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" />
-    </list>
+    <list default="true" id="5c0ef78b-4a8b-4d74-9a91-19bddd89dab1" name="Default" comment="" />
     <list id="a1124af5-ddb3-4ed2-845c-bccecd0abca4" name="Failed commit: Default" comment="Basic movement down. More to work on. Plan on changing how paddle is used. Instead of touching it and then moving, change it so that user can touch anywhere on screen to move it. Next up is adding bricks and ball to test some collision." />
     <ignored path="BlockSmasher.iws" />
     <ignored path=".idea/workspace.xml" />
