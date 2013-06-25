@@ -11,7 +11,7 @@ public class ChangePaddleSizeGem extends Gem {
 
     public ChangePaddleSizeGem(Bitmap bitmap, int x, int y, int col,int currentHealth, int pointsToGive){
 
-        super( bitmap,  x,  y,  col, currentHealth,  pointsToGive);
+        super( bitmap,  x,  y,  col, currentHealth,  pointsToGive, 5f);
         int rand =  0 + (int)(Math.random() * ((1 - 0) + 1));
 
         if(rand!=0){
@@ -41,5 +41,9 @@ public class ChangePaddleSizeGem extends Gem {
         }
 
      }
+
+    public void TimeUp(){
+
+    }
 
 }

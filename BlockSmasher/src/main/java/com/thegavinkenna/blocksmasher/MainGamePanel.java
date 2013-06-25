@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Bitmap;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -75,7 +76,7 @@ public class MainGamePanel extends SurfaceView implements
 
         for(int i = 0; i<balls.length; i ++)
         {
-          balls[i] = new Ball(BitmapFactory.decodeResource(getResources(),R.drawable.ball),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 90 /*Just a little off the ground*/ ,Color.RED,i+17, i+17);
+          balls[i] = new Ball(BitmapFactory.decodeResource(getResources(),R.drawable.ball),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 90 /*Just a little off the ground*/ ,Color.RED,30, 30);
         }
 
         Brick tempBrick;
@@ -115,10 +116,14 @@ public class MainGamePanel extends SurfaceView implements
         }
 
 
+        bg = BitmapFactory.decodeResource(getResources(),R.drawable.bbg);
+        Bitmap s = bg.createScaledBitmap(bg, getWidth(), getHeight(), true);
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        s.compress(Bitmap.CompressFormat.JPEG, 70, baos);
 
 
-
-
+        scaled = BitmapFactory.decodeByteArray(baos.toByteArray(), 0, baos.size());
     }
 
 
@@ -171,51 +176,55 @@ public class MainGamePanel extends SurfaceView implements
         canvas.drawBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.bg),0,getHeight(),null);
     }
 
-    boolean notBG = true;
-    Bitmap bg = BitmapFactory.decodeResource(getResources(),R.drawable.bg);
-    protected void render(Canvas canvas) {
-
-        Rect dest = new Rect(0, 0, getWidth(), getHeight());
-        canvas.drawColor(Color.BLUE);
-        canvas.drawBitmap(bg, null, dest, null);
-        canvas.save();
-
-        canvas.restore();
-        //Draw background once
-        //Bitmap bg = BitmapFactory.decodeResource(getResources(),R.drawable.bg);
-        //getHolder().lockCanvas().drawBitmap(bg,0, 0,null);
-
-       // BitmapDrawable bd = new BitmapDrawable(bg);
-       // this.setBackground(bd);
-        //canvas.drawBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.bg),0,getBottom(),null);
-
-
-        this.paddle.draw(canvas);
-
-        for(int i = 0; i < balls.length ; i++)
-        {
-            balls[i].draw(canvas);
-        }
-
-        for(int i = 0; i < bricks.size(); i ++){
-            bricks.get(i).draw(canvas);
-        }
+    public Paddle GetPaddle(){
+        return this.paddle;
     }
 
-    public void update()
-    {
-        for(int i = 0; i < balls.length ; i++){
-         balls[i].update(this, paddle, 5f, bricks);
-        }
 
-        for(int i = 0; i < bricks.size(); i ++){
-            bricks.get(i).update();
-            if(!bricks.get(i).IsAlive())
+    Bitmap bg ;//= BitmapFactory.decodeResource(getResources(),R.drawable.bbg);
+    Bitmap scaled;// = bg.createScaledBitmap(bg, getWidth(), getHeight(), true);
+
+    Thread renderThread = new Thread(){
+        public void run(){
+            Canvas canvas = getHolder().lockCanvas();
+
+            canvas.drawColor(Color.BLUE);
+            canvas.drawBitmap(scaled,0,0,null);
+
+            paddle.draw(canvas);
+
+            for(int i = 0; i < balls.length ; i++)
             {
-                bricks.remove(i);
+                balls[i].draw(canvas);
+            }
+
+            for(int i = 0; i < bricks.size(); i ++){
+                bricks.get(i).draw(canvas);
+            }
+
+            getHolder().unlockCanvasAndPost(canvas);
+        }
+    };
+
+
+    SurfaceView sv = this;
+    Thread updateThread = new Thread(){
+        public void run(){
+            for(int i = 0; i < balls.length ; i++){
+                balls[i].update(sv, paddle, 5f, bricks);
+            }
+
+            for(int i = 0; i < bricks.size(); i ++){
+                bricks.get(i).update();
+                if(!bricks.get(i).IsAlive())
+                {
+                    bricks.remove(i);
+                }
             }
         }
-    }
+
+    };
+
 
 
 

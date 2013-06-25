@@ -9,6 +9,11 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="bbg"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\bbg.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="brick"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\brick.png"
                 qualifiers="hdpi"

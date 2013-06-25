@@ -29,26 +29,32 @@ public class MainGameThread extends Thread {
 
 
     public void run() {
-        Canvas canvas;
+        Canvas canvas = null;
         Log.d(UNIQUE_NAME, "Starting main game loop");
         this.gamePanel.Init();
 
+        gamePanel.updateThread.run();
+        gamePanel.renderThread.run();
         while (currentlyRunning) {
+
+
             canvas = null;
 
             try {
-                canvas = this.surfaceHolder.lockCanvas();
-               // synchronized (surfaceHolder) {
+                //canvas = this.surfaceHolder.lockCanvas();
+                synchronized (surfaceHolder) {
                     // update game state
                // gamePanel.DrawBG(canvas);
-                    this.gamePanel.update();
+                    gamePanel.updateThread.run();
+                    gamePanel.renderThread.run();
+                    //this.gamePanel.update();
                     // draws the canvas on the panel
-                    this.gamePanel.render(canvas);
+                    //this.gamePanel.render(canvas);
 
-               // }
+                }
             } finally {
                 if (canvas != null) {
-                    surfaceHolder.unlockCanvasAndPost(canvas);
+                    //surfaceHolder.unlockCanvasAndPost(canvas);
                 }
             }
         }
