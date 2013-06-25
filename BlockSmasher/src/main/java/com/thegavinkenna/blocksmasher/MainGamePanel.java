@@ -41,13 +41,20 @@ public class MainGamePanel extends SurfaceView implements
     private java.util.List<Brick> bricks;
 
     private char[][]level = new char[][]{
-        {' ',' ',' ',' ',' ',' ',' ',' ', ' '},
-        {' ','B','B','A','A','A','B','B', ' '},
-        {' ','A','A','A','A','A','A','A', ' '},
-        {' ','B','C','B','B','B','C','B', ' '},
-        {' ','C','C','C','C','C','C','C', ' '},
-        {' ','A','B','A','B','A','B','A', ' '},
-        {' ',' ',' ',' ',' ',' ',' ',' ', ' '}
+        {' ',' ',' ',' ',' ',' ',' ',' ', ' ',' ',' ',' ',' ',' ',' ',' ', ' '},
+        {' ','B','B','A','A','A','B','B', ' ','B','B','A','A','A','B','B', ' '},
+        {' ','A','A','A','A','A','A','A', ' ','A','A','A','A','A','A','A', ' '},
+        {' ','B','C','B','B','B','C','B', ' ','B','C','B','B','B','C','B', ' '},
+        {' ','C','C','C','C','C','C','C', ' ','C','C','C','C','C','C','C', ' '},
+        {' ','A','B','A','B','A','B','A', ' ','A','B','A','B','A','B','A', ' '},
+        {' ',' ',' ',' ',' ',' ',' ',' ', ' ',' ',' ',' ',' ',' ',' ',' ', ' '},
+        {' ',' ',' ',' ',' ',' ',' ',' ', ' ',' ',' ',' ',' ',' ',' ',' ', ' '},
+        {' ','B','B','A','A','A','B','B', ' ','B','B','A','A','A','B','B', ' '},
+        {' ','A','A','A','A','A','A','A', ' ','A','A','A','A','A','A','A', ' '},
+        {' ','B','C','B','B','B','C','B', ' ','B','C','B','B','B','C','B', ' '},
+        {' ','C','C','C','C','C','C','C', ' ','C','C','C','C','C','C','C', ' '},
+        {' ','A','B','A','B','A','B','A', ' ','A','B','A','B','A','B','A', ' '},
+        {' ',' ',' ',' ',' ',' ',' ',' ', ' ',' ',' ',' ',' ',' ',' ',' ', ' '}
     };
 
     public MainGamePanel(Context context) {
@@ -68,7 +75,7 @@ public class MainGamePanel extends SurfaceView implements
 
         for(int i = 0; i<balls.length; i ++)
         {
-          balls[i] = new Ball(BitmapFactory.decodeResource(getResources(),R.drawable.ball),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 90 /*Just a little off the ground*/ ,Color.RED,i+8, i+8);
+          balls[i] = new Ball(BitmapFactory.decodeResource(getResources(),R.drawable.ball),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 90 /*Just a little off the ground*/ ,Color.RED,i+17, i+17);
         }
 
         Brick tempBrick;
@@ -100,7 +107,7 @@ public class MainGamePanel extends SurfaceView implements
                         break;
                 }
 
-                tempBrick = new Brick(brickBit,this.getLeftPaddingOffset() +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+ ( brickBit.getHeight()*distance)) * i,col,health, points);
+                tempBrick = new Brick(brickBit,this.getLeftPaddingOffset() + brickBit.getWidth()/2 +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+ ( brickBit.getHeight()*distance)) * i,col,health, points);
                 bricks.add(tempBrick);
             }
 
