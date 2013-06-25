@@ -43,7 +43,7 @@ public class ChangePaddleSizeGem extends Gem {
      }
 
     public void TimeUp(){
-
+        this.SetCaptured(false);
     }
 
 }

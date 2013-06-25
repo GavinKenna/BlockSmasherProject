@@ -82,7 +82,7 @@ public class MainGamePanel extends SurfaceView implements
         }
 
 
-
+        Boolean emptyBrick = false;
         Brick tempBrick;
         Bitmap brickBit = BitmapFactory.decodeResource(getResources(),R.drawable.brick);
         int distance = 1; // Distance between each brick
@@ -101,26 +101,41 @@ public class MainGamePanel extends SurfaceView implements
                         col = Color.BLUE;
                         health = 1;
                         points = 1;
+                        emptyBrick = false;
                         break;
                     case 'B':
                         col = Color.GREEN;
                         health = 2;
                         points = 2;
+                        emptyBrick = false;
                         break;
                     case 'C':
                         col = Color.MAGENTA;
                         health = 3;
                         points = 3;
+                        emptyBrick = false;
+                        break;
+                    case ' ':
+                        emptyBrick = true;
                         break;
                 }
 
-                tempBrick = new Brick(brickBit,this.getLeftPaddingOffset() + brickBit.getWidth()/2 +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+ ( brickBit.getHeight()*distance)) * i,col,health, points);
-                bricks.add(tempBrick);
+                if(!emptyBrick){
+                    tempBrick = new Brick(brickBit,this.getLeftPaddingOffset() + brickBit.getWidth()/2 +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+ ( brickBit.getHeight()*distance)) * i,col,health, points);
+                    bricks.add(tempBrick);
 
-                //Gen gems
-                tempGem = new ChangePaddleSizeGem(gemBit,  this.getLeftPaddingOffset() + brickBit.getWidth()/2 +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+ ( brickBit.getHeight()*distance)) * i , col, 1,  1);
-                gems.add(tempGem);
-                tempBrick.SetGem(tempGem);
+                    //Gen gems
+                    if(Math.random() < 0.2){ //if true, add a gem to this brick
+                        tempGem = new ChangePaddleSizeGem(gemBit,  this.getLeftPaddingOffset() + brickBit.getWidth()/2 +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+
+                                ( brickBit.getHeight()*distance)) * i , col, 1,  1);
+                        gems.add(tempGem);
+                }else{
+                        tempGem = null;
+                    }
+
+                    tempBrick.SetGem(tempGem);
+                }
+
             }
 
 
@@ -235,7 +250,9 @@ public class MainGamePanel extends SurfaceView implements
                 bricks.get(i).update();
                 if(!bricks.get(i).IsAlive())
                 {
-                    bricks.get(i).GetGem().SetAlive(true);
+                    if(bricks.get(i).GetGem()!=null){
+                        bricks.get(i).GetGem().SetAlive(true);
+                    }
                     bricks.remove(i);
                 }
             }
@@ -244,7 +261,7 @@ public class MainGamePanel extends SurfaceView implements
                 if(gems.get(i).IsAlive()){
                   gems.get(i).update();
                 }
-                if(gems.get(i).IsCaptured())
+                if(!gems.get(i).IsCaptured() && !gems.get(i).IsAlive())
                 {
                     gems.remove(i);
                 }

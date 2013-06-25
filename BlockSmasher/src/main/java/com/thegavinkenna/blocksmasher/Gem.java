@@ -1,6 +1,8 @@
 package com.thegavinkenna.blocksmasher;
 
 import android.graphics.Bitmap;
+import android.graphics.Rect;
+import android.view.SurfaceView;
 
 /**
  * Created by Gavin on 25/06/13.
@@ -20,6 +22,8 @@ public abstract class Gem extends Breakable {
         this.captured = false;
         this.startTime = -1;
         this.SetAlive(false);
+
+        velocity =  1 + (int)(Math.random() * ((10 - 1) + 1));
     }
 
     public Gem(Bitmap bitmap, int x, int y, int col,int currentHealth, int pointsToGive){
@@ -29,6 +33,8 @@ public abstract class Gem extends Breakable {
         this.captured = false;
         this.startTime = -1;
         this.SetAlive(false);
+
+        velocity =  1 + (int)(Math.random() * ((10 - 1) + 1));
     }
 
     public boolean IsAFallingGem(){
@@ -41,7 +47,11 @@ public abstract class Gem extends Breakable {
         this.fallingGem = f;
     }
 
-    public void update(){
+    public void update(SurfaceView bounds /*For bound checking, walls*/, Paddle paddle , Ball ball){
+        CheckCollisionBall(ball);
+        CheckCollisionPaddle(paddle);
+        CheckCollisionBottom(bounds);
+
         if(captured){
             Captured();
         }else if(fallingGem == true && IsAlive()){
@@ -51,6 +61,42 @@ public abstract class Gem extends Breakable {
         }
 
 
+
+    }
+
+    Rect r1;
+    Rect r2;
+
+    private void CheckCollisionPaddle(Paddle paddle) {
+        r1 = new Rect(getX() - getBitmap().getWidth(), getY() - getBitmap().getHeight(),getX() + (getBitmap().getWidth()/2),getY() + (getBitmap().getHeight())/2);
+        r2 = new Rect(paddle.getX() - paddle.getBitmap().getWidth(), paddle.getY() - paddle.getBitmap().getHeight(), paddle.getX() + (paddle.getBitmap().getWidth()), paddle. getY() + (paddle.getBitmap().getHeight()));
+
+        //r1.offset(-30,-30);
+        // r2.offset(-30,-30);
+
+        if(r1.intersect(r2)){
+            this.SetAlive(false);
+            this.captured = true;
+        }
+    }
+
+    private void CheckCollisionBottom(SurfaceView bounds) {
+        // bottom wall
+        if (getY() + getBitmap().getHeight() / 2 >= bounds.getHeight()) {
+            this.SetAlive(false);
+        }
+    }
+    private void CheckCollisionBall(Ball ball) {
+        r1 = new Rect(getX() - getBitmap().getWidth(), getY() - getBitmap().getHeight(),getX() + (getBitmap().getWidth()/2),getY() + (getBitmap().getHeight())/2);
+        r2 = new Rect(ball.getX() - ball.getBitmap().getWidth(), ball.getY() - ball.getBitmap().getHeight(), ball.getX() + (ball.getBitmap().getWidth()), ball. getY() + (ball.getBitmap().getHeight()));
+
+        //r1.offset(-30,-30);
+        // r2.offset(-30,-30);
+
+        if(r1.intersect(r2)){
+            this.SetAlive(false);
+            this.captured = true;
+        }
 
     }
 
@@ -89,6 +135,10 @@ public abstract class Gem extends Breakable {
         }
     } //After the player hits it
 
+
+    public void SetCaptured(boolean c){
+        this.captured = c;
+    }
 
     public abstract void TimeUp(); //After time has expired
 

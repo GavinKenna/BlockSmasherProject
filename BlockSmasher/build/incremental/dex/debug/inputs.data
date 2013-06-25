@@ -1,18 +1,18 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1372182028309 7805 4e25df084567654bfca35d18b9a7c5de3f96db62 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainGamePanel.class
+1372197679921 8256 ce83371b99b4e99b075e7bc14f4052b33078e483 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainGamePanel.class
 1372099218571 484258 bd6479f5dd592790607e0504e66e0f31c2b4d308 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\libs\android-support-v4.jar
 1372124971438 369 5af5da06e467e912690795c41a9963a89cee71d3 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\BuildConfig.class
-1372181484263 1088 f02bcadd3d9d93657aa69a6ed24eb57abdc7e158 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\Brick.class
-1372182164529 2067 d7cca2699bd13f4edbe6554e18335a974966a4da C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\Gem.class
-1372181040478 2073 59be661be4a159474cdcb40b1fdb0a272523ce22 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainGamePanel$1.class
+1372197307688 1095 ed456de9e24fc28ae056066b76b57b5ad81fc5fd C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\Brick.class
+1372199354762 3829 2811edca2ea075674ea0c3a0443a26415247d208 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\Gem.class
+1372197265536 2073 f83a49fd8d79800dd58aa87dde7797ba5cf58121 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainGamePanel$1.class
 1372182028323 429 43cd6a226b60881a6123bd446642a02ffae385ec C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R$id.class
 1372124971282 3760 a6557577329799408e4ae649bb03deb8a5bba7b9 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\Ball.class
 1372124971353 1161 4bfc7420dff26c2c1008952fa6b9a323ebd8bca3 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainActivity.class
-1372181484389 1920 b513664264c9db43ce01e507fab7b38fe2e58539 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainGamePanel$2.class
+1372199354878 1969 58f1569ccdac2cec69406619f2d1123ec053c502 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainGamePanel$2.class
 1372182028326 467 a8a1200bd933ea553fc888be2c5d8a1e95a4fbee C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R$style.class
-1372170095005 1063 42e5f21ab3326c12402f7595d1e880d542a29d96 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\ChangePaddleSizeGem.class
+1372199354770 1096 623587fc9d12307e436956442cc4aa9e71f01591 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\ChangePaddleSizeGem.class
 1372166196632 1627 8d55a7db1eb6a6561d40c76c3dbf639764a43c10 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\MainGameThread.class
 1372182028327 797 1e61453544ec76a6d7e2993ca493d8840006a7cd C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R.class
 1372124971429 497 2425a54a255e5f65b32edbf5782fad8c651e7ae3 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\debug\com\thegavinkenna\blocksmasher\R$dimen.class

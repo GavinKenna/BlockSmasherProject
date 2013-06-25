@@ -25,7 +25,7 @@ public class Brick extends Breakable {
 
     public void update(){
         super.update();
-        if(!this.IsAlive()){
+        if(!this.IsAlive() && this.gem!=null){
             //bring the gem to life
             this.gem.SetAlive(true);
         }
