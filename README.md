@@ -1,7 +1,6 @@
 Block Smasher Project
 ===================
 
-<h1>Block Smasher/h1>
 Block Smasher is a clone of the popular block breaker games. The object of the game is to prevent the ball from falling 
 under your paddle, while also trying to destroy all of the bricks on screen. Along the way there will be gems and
 powerups that affect the game, such as making your paddle larger, smaller, slowing the speed of the ball down (or up), 
