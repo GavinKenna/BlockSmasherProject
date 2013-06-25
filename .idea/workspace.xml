@@ -7,16 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c0ef78b-4a8b-4d74-9a91-19bddd89dab1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java" />
-      <change type="DELETED" beforePath="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\release\com\thegavinkenna\blocksmasher\BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\release\com\thegavinkenna\blocksmasher\R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\release\com\thegavinkenna\blocksmasher\R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\release\com\thegavinkenna\blocksmasher\R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\release\com\thegavinkenna\blocksmasher\R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\classes\release\com\thegavinkenna\blocksmasher\R.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Brick.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/BlockSmasher.iml" afterPath="$PROJECT_DIR$/BlockSmasher/BlockSmasher.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Breakable.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Breakable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGameThread.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGameThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/build/source/r/debug/com/thegavinkenna/blocksmasher/R.java" afterPath="$PROJECT_DIR$/BlockSmasher/build/source/r/debug/com/thegavinkenna/blocksmasher/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a1124af5-ddb3-4ed2-845c-bccecd0abca4" name="Failed commit: Default" comment="Basic movement down. More to work on. Plan on changing how paddle is used. Instead of touching it and then moving, change it so that user can touch anywhere on screen to move it. Next up is adding bricks and ball to test some collision." />
@@ -36,6 +33,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -72,7 +70,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -85,7 +82,7 @@
       <file leaf-file-name="MainGamePanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="198" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="2023">
+            <state line="96" column="44" selection-start="2913" selection-end="2913" vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="3774">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,13 +90,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Brick.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Brick.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="5" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MainGameThread.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGameThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="30" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="1105">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="42" column="17" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0" vertical-offset="373" max-vertical-offset="1105">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,9 +112,7 @@
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="22" column="33" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1122">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,10 +120,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="35" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="680">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="30" column="0" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="595">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,16 +129,7 @@
       <file leaf-file-name="Breakable.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Breakable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="29" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuildConfig.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/system/compiler/blocksmasherproject.5525d16c/.generated/Android_BuildConfig_Generator/BlockSmasher.6d0158da/production/com/thegavinkenna/blocksmasher/BuildConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="13" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+            <state line="17" column="32" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="104" max-vertical-offset="1003">
               <folding />
             </state>
           </provider>
@@ -147,7 +138,7 @@
       <file leaf-file-name="Entity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="28" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="692" max-vertical-offset="1462">
+            <state line="70" column="0" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.0" vertical-offset="886" max-vertical-offset="1462">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,27 +149,7 @@
       <file leaf-file-name="Ball.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="20" selection-start="2951" selection-end="2951" vertical-scroll-proportion="0.6980462" vertical-offset="1256" max-vertical-offset="1972">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BlockSmasher/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+            <state line="69" column="0" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.41944847" vertical-offset="714" max-vertical-offset="2380">
               <folding />
             </state>
           </provider>
@@ -207,6 +178,11 @@
     </option>
   </component>
   <component name="GradleLocalSettings">
+    <option name="tasksExpandState">
+      <map>
+        <entry key="" value="true" />
+      </map>
+    </option>
     <option name="availableProjects">
       <map>
         <entry>
@@ -242,10 +218,11 @@
         <option value="$PROJECT_DIR$/BlockSmasher/build/source/r/debug/com/thegavinkenna/blocksmasher/R.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/BreakableEntity.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/bActivity.java" />
-        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Breakable.java" />
-        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGameThread.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java" />
+        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Breakable.java" />
+        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Brick.java" />
+        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGameThread.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java" />
       </list>
@@ -283,12 +260,39 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="BlockSmasher" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Android 4.2.2 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlockSmasher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Android 4.2.2 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -557,44 +561,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BlockSmasher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BlockSmasherProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BlockSmasher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="debug" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -613,8 +582,8 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -843,30 +812,30 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34240362" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3363029" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34240362" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3363029" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15528281" sideWeight="0.6703786" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15528281" sideWeight="0.8106904" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18930958" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -932,47 +901,21 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="554">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2890">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="554">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="554" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.79122806" vertical-offset="76" max-vertical-offset="646">
           <folding>
-            <element signature="e#377#400#0" expanded="true" />
-            <element signature="e#599#617#0" expanded="true" />
+            <element signature="e#599#617#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -982,16 +925,57 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/system/compiler/blocksmasherproject.5525d16c/.generated/Android_BuildConfig_Generator/BlockSmasher.6d0158da/production/com/thegavinkenna/blocksmasher/BuildConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/app/Instrumentation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="16" selection-start="5963" selection-end="5963" vertical-scroll-proportion="0.332" vertical-offset="1721" max-vertical-offset="2686" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="19" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.332" vertical-offset="718" max-vertical-offset="7429" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="33" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlockSmasher/build/res/all/debug/drawable-hdpi/ball.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Breakable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="29" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="714">
+        <state line="17" column="32" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="104" max-vertical-offset="1003">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="680">
+        <state line="30" column="0" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Brick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="5" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="0" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.0" vertical-offset="886" max-vertical-offset="1462">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1000,41 +984,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGameThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="30" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="1105">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/system/compiler/blocksmasherproject.5525d16c/.generated/Android_BuildConfig_Generator/BlockSmasher.6d0158da/production/com/thegavinkenna/blocksmasher/BuildConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+        <state line="42" column="17" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0" vertical-offset="373" max-vertical-offset="1105">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="28" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="692" max-vertical-offset="1462">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1122">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="198" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="2023">
+        <state line="96" column="44" selection-start="2913" selection-end="2913" vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="3774">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1043,10 +1000,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="20" selection-start="2951" selection-end="2951" vertical-scroll-proportion="0.6980462" vertical-offset="1256" max-vertical-offset="1972">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="69" column="0" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.41944847" vertical-offset="714" max-vertical-offset="2380">
+          <folding />
         </state>
       </provider>
     </entry>

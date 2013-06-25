@@ -136,6 +136,16 @@
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
+            <file
+                name="bg"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\bg.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="Thumbs"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\Thumbs.db"
+                qualifiers="xhdpi"
+                type="drawable" />
         </source>
         <source path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\build\res\rs\debug" />
     </dataSet>

@@ -15,6 +15,7 @@ public  class Breakable extends Entity{
 
     private int currentHealth; //How many times the entity will need to be hit to die. When it hits 0, its dead.
     private int pointsToGive; //How many points to give the player when dead.
+    private boolean alive = true;
 
     public Breakable(int currentHealth, int pointsToGive, Bitmap bitmap, int x, int y){
         super(bitmap, x, y);
@@ -30,7 +31,23 @@ public  class Breakable extends Entity{
         this.pointsToGive = pointsToGive;
     }
 
-    public  void update(){}
+    public  void update(){
+        if(currentHealth <= 0){
+            alive = false;
+        }
+    }
+
+    public boolean IsAlive(){
+        return alive;
+    }
+
+    public int Points(){
+        return pointsToGive;
+    }
+
+    public void Hit(){
+         this.currentHealth--;
+    }
 
 
 }
