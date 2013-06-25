@@ -41,6 +41,10 @@ public  class Breakable extends Entity{
         return alive;
     }
 
+    public void SetAlive(boolean a){
+        alive = a;
+    }
+
     public int Points(){
         return pointsToGive;
     }

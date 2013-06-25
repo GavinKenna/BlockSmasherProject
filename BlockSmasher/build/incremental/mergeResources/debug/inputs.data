@@ -1,8 +1,8 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1372166673979 51200 9cc105c640937147ca378fdcfb8af20f17a2f0d8 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\Thumbs.db
-1372118507800 142438 4f1e06b06cd875b0289dcd11eb77f97589741293 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\bbg.png
+1372181992659 87552 2408481db40c4650a55c83011e57e60c6b875fda C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\Thumbs.db
+1372171015412 142438 4f1e06b06cd875b0289dcd11eb77f97589741293 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\bbg.png
 1372092743432 3348 ed2e8347d4e464ad6e14ab9980911db48d47f3b3 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\brick.png
 1369266704000 14383 82acdd75e3fcc36026109406625edc69d4d7212d C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\ic_launcher.png
 1372118507800 142438 4f1e06b06cd875b0289dcd11eb77f97589741293 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\bg.png
@@ -15,6 +15,7 @@
 1372092760593 2895 7b731fa32950ddac599da9960467f6fbdbcf8b11 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\paddle.png
 1372092751920 3007 b7a704b4a0e4ce68c85a12e7a2d801b8da75a0d7 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\paddlelong.png
 1372099218716 646 6c93718b4ad5325e92eafc4f9478a90ddf435ff2 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\layout\activityb.xml
+1372181980411 4442 74e3bc27c6a42a7e016029aeea8000c3f937df7d C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\gem.png
 1372092766541 2968 cea8d53f1f371fb763c6be7f3eda38f3ce93f7c4 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\paddlesmall.png
 1369266704000 9397 4a5a9affbb731f195fc18fea78d51be7db7536a2 C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\ic_launcher.png
 1369266704000 5237 7761bceaf18ed25cdba5f34bf00a55616d078acf C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-mdpi\ic_launcher.png

@@ -19,6 +19,11 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="gem"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\gem.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\ic_launcher.png"
                 qualifiers="hdpi"

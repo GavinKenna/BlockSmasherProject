@@ -40,6 +40,7 @@ public class MainGamePanel extends SurfaceView implements
     private Paddle paddle;
     private Ball[] balls = new Ball[1]; //Will be made into an array soon, so that there can be loads of ball on scren at once when a certain gem is hit.
     private java.util.List<Brick> bricks;
+    private java.util.List<Gem> gems;
 
     private char[][]level = new char[][]{
         {' ',' ',' ',' ',' ',' ',' ',' ', ' ',' ',' ',' ',' ',' ',' ',' ', ' '},
@@ -72,12 +73,15 @@ public class MainGamePanel extends SurfaceView implements
     public void Init()
     {
         bricks = new ArrayList<Brick>();
+        gems = new ArrayList<Gem>();
         paddle = new Paddle(BitmapFactory.decodeResource(getResources(),R.drawable.paddle),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 40 /*Just a little off the ground*/,Color.GREEN);
 
         for(int i = 0; i<balls.length; i ++)
         {
           balls[i] = new Ball(BitmapFactory.decodeResource(getResources(),R.drawable.ball),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 90 /*Just a little off the ground*/ ,Color.RED,30, 30);
         }
+
+
 
         Brick tempBrick;
         Bitmap brickBit = BitmapFactory.decodeResource(getResources(),R.drawable.brick);
@@ -86,6 +90,8 @@ public class MainGamePanel extends SurfaceView implements
         int health = 0;
         int points = 0;
 
+        Gem tempGem;
+        Bitmap gemBit = BitmapFactory.decodeResource(getResources(),R.drawable.gem);
 
         for(int i = 0 ; i < level.length ; i++){
             for(int j = 0 ; j < level[i].length ; j++){
@@ -110,6 +116,11 @@ public class MainGamePanel extends SurfaceView implements
 
                 tempBrick = new Brick(brickBit,this.getLeftPaddingOffset() + brickBit.getWidth()/2 +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+ ( brickBit.getHeight()*distance)) * i,col,health, points);
                 bricks.add(tempBrick);
+
+                //Gen gems
+                tempGem = new ChangePaddleSizeGem(gemBit,  this.getLeftPaddingOffset() + brickBit.getWidth()/2 +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+ ( brickBit.getHeight()*distance)) * i , col, 1,  1);
+                gems.add(tempGem);
+                tempBrick.SetGem(tempGem);
             }
 
 
@@ -202,6 +213,12 @@ public class MainGamePanel extends SurfaceView implements
                 bricks.get(i).draw(canvas);
             }
 
+            for(int i = 0; i < gems.size(); i ++){
+                if(gems.get(i).IsAlive()){
+                 gems.get(i).draw(canvas);
+                }
+            }
+
             getHolder().unlockCanvasAndPost(canvas);
         }
     };
@@ -218,7 +235,18 @@ public class MainGamePanel extends SurfaceView implements
                 bricks.get(i).update();
                 if(!bricks.get(i).IsAlive())
                 {
+                    bricks.get(i).GetGem().SetAlive(true);
                     bricks.remove(i);
+                }
+            }
+
+            for(int i = 0; i < gems.size(); i ++){
+                if(gems.get(i).IsAlive()){
+                  gems.get(i).update();
+                }
+                if(gems.get(i).IsCaptured())
+                {
+                    gems.remove(i);
                 }
             }
         }
