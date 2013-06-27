@@ -14,6 +14,8 @@ public abstract class Gem extends Breakable {
     private float timeLasts; //How long does this powerup/gem last?
     private boolean captured; //Player took it?
     private long startTime; //For when the gem is touched
+    private boolean SpawnTouch = true; // This is a flag to stop the gem from being eaten straight after a brick was smashed.
+    private boolean dead = false; // Set to true when you want the gem to go forever.
     //private boolean alive = false; //Is this gem alive and showing?
 
     public Gem(Bitmap bitmap, int x, int y, int col,int currentHealth, int pointsToGive, float time){
@@ -41,6 +43,14 @@ public abstract class Gem extends Breakable {
         return this.fallingGem;
     }
 
+    public boolean IsDead(){
+        return dead;
+    }
+
+    public void SetDead(boolean d){
+        dead = d;
+    }
+
 
 
     public void SetFalling(boolean f){
@@ -53,7 +63,7 @@ public abstract class Gem extends Breakable {
         CheckCollisionBottom(bounds);
 
         if(captured){
-            Captured();
+            Captured(paddle);
         }else if(fallingGem == true && IsAlive()){
             this.setY(this.getY()+(int)velocity); //if the gem is meant to fall, let it fall with velocity. MAKE IT RAIN GEMS!
         }else{
@@ -68,15 +78,20 @@ public abstract class Gem extends Breakable {
     Rect r2;
 
     private void CheckCollisionPaddle(Paddle paddle) {
-        r1 = new Rect(getX() - getBitmap().getWidth(), getY() - getBitmap().getHeight(),getX() + (getBitmap().getWidth()/2),getY() + (getBitmap().getHeight())/2);
-        r2 = new Rect(paddle.getX() - paddle.getBitmap().getWidth(), paddle.getY() - paddle.getBitmap().getHeight(), paddle.getX() + (paddle.getBitmap().getWidth()), paddle. getY() + (paddle.getBitmap().getHeight()));
+
+        r1 = new Rect(getX() - (getBitmap().getWidth()/2), getY() - (getBitmap().getHeight())/2 ,getX() + (getBitmap().getWidth()/2),getY() + (getBitmap().getHeight())/2);
+        r2 = new Rect(paddle.getX() - (paddle.getBitmap().getWidth()/2) , paddle.getY() - paddle.getBitmap().getHeight()/2 , paddle.getX() + (paddle.getBitmap().getWidth()/2), paddle. getY() + (paddle.getBitmap().getHeight()/2));
+
+        // Rect r2 = new Rect(this.getX() -(this.getBitmap().getWidth()/2) , this.getY() -  (this.getBitmap().getHeight()/2) , this.getX() + (this.getBitmap().getWidth()/2),this.getY()+(this.getBitmap().getHeight())/2);
 
         //r1.offset(-30,-30);
         // r2.offset(-30,-30);
 
-        if(r1.intersect(r2)){
+        if(r1.intersect(r2) && !this.SpawnTouch){
             this.SetAlive(false);
             this.captured = true;
+        }else if(r1.intersect(r2) == false && this.SpawnTouch == true){
+            this.SpawnTouch=false;
         }
     }
 
@@ -87,15 +102,17 @@ public abstract class Gem extends Breakable {
         }
     }
     private void CheckCollisionBall(Ball ball) {
-        r1 = new Rect(getX() - getBitmap().getWidth(), getY() - getBitmap().getHeight(),getX() + (getBitmap().getWidth()/2),getY() + (getBitmap().getHeight())/2);
-        r2 = new Rect(ball.getX() - ball.getBitmap().getWidth(), ball.getY() - ball.getBitmap().getHeight(), ball.getX() + (ball.getBitmap().getWidth()), ball. getY() + (ball.getBitmap().getHeight()));
+        r1 = new Rect(getX() - (getBitmap().getWidth()/2), getY() - (getBitmap().getHeight())/2 ,getX() + (getBitmap().getWidth()/2),getY() + (getBitmap().getHeight())/2);
+        r2 = new Rect(ball.getX() - (ball.getBitmap().getWidth()/2) , ball.getY() - (ball.getBitmap().getHeight()/2) , ball.getX() + (ball.getBitmap().getWidth()/2), ball. getY() + (ball.getBitmap().getHeight()/2));
 
         //r1.offset(-30,-30);
         // r2.offset(-30,-30);
 
-        if(r1.intersect(r2)){
+        if(r1.intersect(r2)&& !this.SpawnTouch){
             this.SetAlive(false);
             this.captured = true;
+        }else if(r1.intersect(r2) == false && this.SpawnTouch == true){
+             this.SpawnTouch=false;
         }
 
     }
@@ -122,7 +139,7 @@ public abstract class Gem extends Breakable {
         return this.captured;
     }
 
-    public  void Captured(){
+    public  void Captured(Paddle paddle){
         if(this.timeLasts!=-1){
             if(startTime==-1){
                 startTime = System.currentTimeMillis()/1000;

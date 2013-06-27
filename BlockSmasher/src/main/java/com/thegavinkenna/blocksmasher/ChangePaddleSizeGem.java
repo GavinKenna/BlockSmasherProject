@@ -11,7 +11,7 @@ public class ChangePaddleSizeGem extends Gem {
 
     public ChangePaddleSizeGem(Bitmap bitmap, int x, int y, int col,int currentHealth, int pointsToGive){
 
-        super( bitmap,  x,  y,  col, currentHealth,  pointsToGive, 5f);
+        super( bitmap,  x,  y,  col, currentHealth,  pointsToGive, 50000f);
         int rand =  0 + (int)(Math.random() * ((1 - 0) + 1));
 
         if(rand!=0){
@@ -30,20 +30,27 @@ public class ChangePaddleSizeGem extends Gem {
 
     }
 
-    public void Captured(){
+    public void Captured(Paddle paddle){
     /*
     * Caught gem logic here
     * */
-        if(!paddleBigger){
+        super.Captured(paddle);
+         if(!paddleBigger){
             //make paddle smaller for certain time [15 seconds]
+             if(!paddle.IsSmall()){
+                 paddle.SetSmall(true);
+             }
         }else{
             //make paddle larger for certain time
+             if(!paddle.IsLarge()){
+                 paddle.SetLarge(true);
+             }
         }
 
      }
 
     public void TimeUp(){
-        this.SetCaptured(false);
+        this.SetDead(true);
     }
 
 }

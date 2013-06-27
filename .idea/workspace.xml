@@ -6,7 +6,14 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c0ef78b-4a8b-4d74-9a91-19bddd89dab1" name="Default" comment="" />
+    <list default="true" id="5c0ef78b-4a8b-4d74-9a91-19bddd89dab1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/ChangePaddleSizeGem.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/ChangePaddleSizeGem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Gem.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Gem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <list id="a1124af5-ddb3-4ed2-845c-bccecd0abca4" name="Failed commit: Default" comment="Basic movement down. More to work on. Plan on changing how paddle is used. Instead of touching it and then moving, change it so that user can touch anywhere on screen to move it. Next up is adding bricks and ball to test some collision." />
     <ignored path="BlockSmasher.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +31,38 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Gem.java" line="104" class="com.thegavinkenna.blocksmasher.Gem" package="com.thegavinkenna.blocksmasher">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" line="264" class="com.thegavinkenna.blocksmasher.MainGamePanel$2" package="com.thegavinkenna.blocksmasher">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -61,53 +99,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" line="151" class="com.thegavinkenna.blocksmasher.MainGamePanel" package="com.thegavinkenna.blocksmasher">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" line="259" class="com.thegavinkenna.blocksmasher.MainGamePanel$2" package="com.thegavinkenna.blocksmasher">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/ChangePaddleSizeGem.java" line="14" class="com.thegavinkenna.blocksmasher.ChangePaddleSizeGem" package="com.thegavinkenna.blocksmasher">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -120,23 +112,13 @@
       <file leaf-file-name="MainGamePanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="263" column="70" selection-start="8832" selection-end="8832" vertical-scroll-proportion="0.0" vertical-offset="4048" max-vertical-offset="4811">
+            <state line="80" column="205" selection-start="3131" selection-end="3131" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="4590">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7332#8022#0" expanded="true" />
-                <element signature="e#8015#8016#0" expanded="true" />
-                <element signature="e#8079#8936#0" expanded="true" />
-                <element signature="e#8928#8929#0" expanded="true" />
+                <element signature="e#7666#8356#0" expanded="true" />
+                <element signature="e#8349#8350#0" expanded="true" />
+                <element signature="e#8413#9285#0" expanded="true" />
+                <element signature="e#9277#9278#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="53" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -144,7 +126,7 @@
       <file leaf-file-name="Brick.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Brick.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+            <state line="22" column="0" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -153,7 +135,7 @@
       <file leaf-file-name="MainGameThread.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGameThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1207">
+            <state line="35" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1241">
               <folding />
             </state>
           </provider>
@@ -162,10 +144,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state line="30" column="0" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="680">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,7 +153,7 @@
       <file leaf-file-name="Breakable.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Breakable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="26" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="1071">
+            <state line="37" column="0" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
@@ -182,7 +162,7 @@
       <file leaf-file-name="Entity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="0" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.0" vertical-offset="886" max-vertical-offset="1462">
+            <state line="55" column="28" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1377">
               <folding />
             </state>
           </provider>
@@ -191,7 +171,7 @@
       <file leaf-file-name="Ball.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="22" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.0" vertical-offset="1130" max-vertical-offset="2380">
+            <state line="77" column="32" selection-start="1958" selection-end="1958" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="2856">
               <folding />
             </state>
           </provider>
@@ -200,18 +180,25 @@
       <file leaf-file-name="Gem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Gem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="26" selection-start="4374" selection-end="4374" vertical-scroll-proportion="0.0" vertical-offset="1804" max-vertical-offset="2567">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="105" column="116" selection-start="3902" selection-end="3902" vertical-scroll-proportion="0.0" vertical-offset="2144" max-vertical-offset="2822">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChangePaddleSizeGem.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ChangePaddleSizeGem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/ChangePaddleSizeGem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="19" selection-start="914" selection-end="914" vertical-scroll-proportion="0.58176553" vertical-offset="227" max-vertical-offset="935">
+            <state line="27" column="32" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="1054">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Paddle.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="0" selection-start="1858" selection-end="1858" vertical-scroll-proportion="1.9557523" vertical-offset="0" max-vertical-offset="1938">
               <folding />
             </state>
           </provider>
@@ -280,15 +267,15 @@
         <option value="$PROJECT_DIR$/BlockSmasher/build/source/r/debug/com/thegavinkenna/blocksmasher/R.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/BreakableEntity.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/bActivity.java" />
-        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java" />
-        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGameThread.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Breakable.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Brick.java" />
-        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" />
-        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Gem.java" />
         <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/ChangePaddleSizeGem.java" />
+        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Gem.java" />
+        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" />
+        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java" />
+        <option value="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java" />
       </list>
     </option>
   </component>
@@ -324,6 +311,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -566,7 +554,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -822,11 +809,11 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34240362" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20155902" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3363029" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12026726" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -916,23 +903,9 @@
         <state line="53" column="19" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.332" vertical-offset="718" max-vertical-offset="7429" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/build/res/all/debug/drawable-hdpi/ball.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.0" vertical-offset="886" max-vertical-offset="1462">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/AndroidManifest.xml">
@@ -950,17 +923,13 @@
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="0" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="680">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="53" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <folding />
-        </state>
+        <state line="22" column="53" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGameThread.java">
@@ -972,50 +941,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Breakable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="26" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="1071">
+        <state line="37" column="0" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="1071">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Brick.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+        <state line="22" column="0" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java">
+    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="263" column="70" selection-start="8832" selection-end="8832" vertical-scroll-proportion="0.0" vertical-offset="4048" max-vertical-offset="4811">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7332#8022#0" expanded="true" />
-            <element signature="e#8015#8016#0" expanded="true" />
-            <element signature="e#8079#8936#0" expanded="true" />
-            <element signature="e#8928#8929#0" expanded="true" />
-          </folding>
+        <state line="55" column="28" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1377">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java">
+    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/ChangePaddleSizeGem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="22" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.0" vertical-offset="1130" max-vertical-offset="2380">
+        <state line="27" column="32" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="1054">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Gem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="26" selection-start="4374" selection-end="4374" vertical-scroll-proportion="0.0" vertical-offset="1804" max-vertical-offset="2567">
+        <state line="105" column="116" selection-start="3902" selection-end="3902" vertical-scroll-proportion="0.0" vertical-offset="2144" max-vertical-offset="2822">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="205" selection-start="3131" selection-end="3131" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="4590">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#7666#8356#0" expanded="true" />
+            <element signature="e#8349#8350#0" expanded="true" />
+            <element signature="e#8413#9285#0" expanded="true" />
+            <element signature="e#9277#9278#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/ChangePaddleSizeGem.java">
+    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="19" selection-start="914" selection-end="914" vertical-scroll-proportion="0.58176553" vertical-offset="227" max-vertical-offset="935">
+        <state line="77" column="32" selection-start="1958" selection-end="1958" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="2856">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="0" selection-start="1858" selection-end="1858" vertical-scroll-proportion="1.9557523" vertical-offset="0" max-vertical-offset="1938">
           <folding />
         </state>
       </provider>

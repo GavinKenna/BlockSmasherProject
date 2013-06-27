@@ -73,7 +73,84 @@ public class Ball extends Entity {
 
     public void draw(Canvas canvas){
         canvas.drawBitmap(getBitmap(),getX() - (getBitmap().getWidth() / 2), getY() - (getBitmap().getHeight()/2),getPaint());
+          /*Paint p = new Paint();
+         p.setColor(Color.GREEN);
+       canvas.drawRect(r1, p);*/ //Debugging purposes
     }
+
+    public boolean IsBusy(){
+        return this.busy;
+    }
+
+    public boolean HadCollision(SurfaceView bounds /*For bound checking, walls*/, Paddle paddle /*Collision with the paddle*/ /*Add in here bricks, gens, etc*/, float xVelocityFromPaddle /*The speed of the paddle affects ball speed*/, List<Brick> bricks){
+        if(!busy){
+            if (xD == DIRECTION_RIGHT && this.getX() + this.getBitmap().getWidth() / 2 >=  bounds.getWidth())
+            {
+                busy = true;
+                this.InvertXDirection();
+                return true;
+            }
+
+            // left wall
+            if (xD == DIRECTION_LEFT && this.getX() - this.getBitmap().getWidth() / 2 <= 0) {
+                this.InvertXDirection();
+                busy = true;
+                return true;
+            }
+
+            // bottom wall
+            if (yD == DIRECTION_DOWN && getY() + getBitmap().getHeight() / 2 >= bounds.getHeight()) {
+                InvertYDirection();
+                alive = false;
+                busy = true;
+                return true;
+            }
+
+            // top wall
+            if (yD == DIRECTION_UP && getY() - getBitmap().getHeight() / 2 <= 0) {
+                this.InvertYDirection();
+                busy = true;
+                return true;
+            }
+
+
+            //Collision with paddle
+            r1 = new Rect(getX() - (getBitmap().getWidth()/2), getY() - (getBitmap().getHeight()/2),getX() + (getBitmap().getWidth()/2),getY() + (getBitmap().getHeight()/2));
+            r2 = new Rect(paddle.getX() - (paddle.getBitmap().getWidth()/2), paddle.getY() - (paddle.getBitmap().getHeight()/2), paddle.getX() + (paddle.getBitmap().getWidth()/2), paddle.getY() + (paddle.getBitmap().getHeight()/2));
+            //r1.offset(-30,-30);
+            // r2.offset(-30,-30);
+
+            if(r1.intersect(r2)){
+                InvertYDirection();
+                busy = true;
+                return true;
+                //InvertXDirection();
+            }
+
+            //Collision with brick
+            for(int i = 0 ; i < bricks.size() ; i++){
+                r1 = new Rect(getX() - (getBitmap().getWidth()/2), getY() - (getBitmap().getHeight()/2),getX() + (getBitmap().getWidth()/2),getY() + (getBitmap().getHeight()/2));
+
+                r2 = new Rect(bricks.get(i).getX() - (bricks.get(i).getBitmap().getWidth()/2) , bricks.get(i).getY() -(bricks.get(i).getBitmap().getHeight()/2) , bricks.get(i).getX() + (bricks.get(i).getBitmap().getWidth()/2), bricks.get(i).getY() + (bricks.get(i).getBitmap().getHeight()/2));
+
+                //r1.offset(-30,-30);
+                // r2.offset(-30,-30);
+
+                if(r1.intersect(r2) && !busy){
+                    busy = true;
+                    InvertYDirection();
+                    bricks.get(i).Hit();
+                    return true;
+
+                    //InvertXDirection();
+                }
+            }
+            busy = false;
+        }
+        return false;
+    }
+
+
 
     public void update(SurfaceView bounds /*For bound checking, walls*/, Paddle paddle /*Collision with the paddle*/ /*Add in here bricks, gens, etc*/, float xVelocityFromPaddle /*The speed of the paddle affects ball speed*/, List<Brick> bricks){
 
@@ -81,57 +158,8 @@ public class Ball extends Entity {
         * Wall collision testing
         * */
 
-        if (xD == DIRECTION_RIGHT && this.getX() + this.getBitmap().getWidth() / 2 >=  bounds.getWidth())
-        {
-            this.InvertXDirection();
-        }
 
-        // left wall
-        if (xD == DIRECTION_LEFT && this.getX() - this.getBitmap().getWidth() / 2 <= 0) {
-            this.InvertXDirection();
-        }
-
-        // bottom wall
-        if (yD == DIRECTION_DOWN && getY() + getBitmap().getHeight() / 2 >= bounds.getHeight()) {
-            InvertYDirection();
-            alive = false;
-        }
-
-        // top wall
-        if (yD == DIRECTION_UP && getY() - getBitmap().getHeight() / 2 <= 0) {
-           this.InvertYDirection();
-        }
-
-
-        //Collision with paddle
-        r1 = new Rect(getX() - getBitmap().getWidth(), getY() - getBitmap().getHeight(),getX() + (getBitmap().getWidth()/2),getY() + (getBitmap().getHeight())/2);
-        r2 = new Rect(paddle.getX() - paddle.getBitmap().getWidth(), paddle.getY() - paddle.getBitmap().getHeight(), paddle.getX() + (paddle.getBitmap().getWidth()), paddle. getY() + (paddle.getBitmap().getHeight()));
-
-        //r1.offset(-30,-30);
-       // r2.offset(-30,-30);
-
-        if(r1.intersect(r2)){
-            InvertYDirection();
-            //InvertXDirection();
-        }
-
-        //Collision with brick
-        for(int i = 0 ; i < bricks.size() ; i++){
-            r1 = new Rect(getX() - getBitmap().getWidth(), getY() - getBitmap().getHeight(),getX() + (getBitmap().getWidth()/2),getY() + (getBitmap().getHeight())/2);
-
-            r2 = new Rect(bricks.get(i).getX() -bricks.get(i).getBitmap().getWidth(), bricks.get(i).getY() - bricks.get(i).getBitmap().getHeight(), bricks.get(i).getX() + (bricks.get(i).getBitmap().getWidth()), bricks.get(i). getY() + (bricks.get(i).getBitmap().getHeight()));
-
-            //r1.offset(-30,-30);
-            // r2.offset(-30,-30);
-
-            if(r1.intersect(r2) && !busy){
-                busy = true;
-                InvertYDirection();
-                bricks.get(i).Hit();
-
-                //InvertXDirection();
-            }
-        }
+        HadCollision( bounds,  paddle ,  xVelocityFromPaddle ,bricks);
 
 
 

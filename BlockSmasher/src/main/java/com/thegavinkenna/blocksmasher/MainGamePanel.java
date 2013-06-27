@@ -74,11 +74,11 @@ public class MainGamePanel extends SurfaceView implements
     {
         bricks = new ArrayList<Brick>();
         gems = new ArrayList<Gem>();
-        paddle = new Paddle(BitmapFactory.decodeResource(getResources(),R.drawable.paddle),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 40 /*Just a little off the ground*/,Color.GREEN);
+        paddle = new Paddle(BitmapFactory.decodeResource(getResources(),R.drawable.paddle),BitmapFactory.decodeResource(getResources(),R.drawable.paddlesmall),BitmapFactory.decodeResource(getResources(),R.drawable.paddlelong),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 40 /*Just a little off the ground*/,Color.GREEN);
 
         for(int i = 0; i<balls.length; i ++)
         {
-          balls[i] = new Ball(BitmapFactory.decodeResource(getResources(),R.drawable.ball),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 90 /*Just a little off the ground*/ ,Color.RED,30, 30);
+          balls[i] = new Ball(BitmapFactory.decodeResource(getResources(),R.drawable.ball),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 90 /*Just a little off the ground*/ ,Color.RED,20, 20);
         }
 
 
@@ -142,14 +142,17 @@ public class MainGamePanel extends SurfaceView implements
         }
 
 
+        /**
+         * The following code is to compress the background image, as it takes a bit of CPU power drawing it on the screen.
+         */
         bg = BitmapFactory.decodeResource(getResources(),R.drawable.bbg);
         Bitmap s = bg.createScaledBitmap(bg, getWidth(), getHeight(), true);
-
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         s.compress(Bitmap.CompressFormat.JPEG, 70, baos);
-
-
         scaled = BitmapFactory.decodeByteArray(baos.toByteArray(), 0, baos.size());
+        /**
+         * End of compression
+         */
     }
 
 
@@ -259,9 +262,9 @@ public class MainGamePanel extends SurfaceView implements
 
             for(int i = 0; i < gems.size(); i ++){
                 if(gems.get(i).IsAlive()){
-                  gems.get(i).update();
+                  gems.get(i).update(sv, paddle, balls[0]); //change to list of balls
                 }
-                if(!gems.get(i).IsCaptured() && !gems.get(i).IsAlive())
+                if(gems.get(i).IsDead())
                 {
                     gems.remove(i);
                 }
