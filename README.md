@@ -1,5 +1,6 @@
 Block Smasher Project
 ===================
+![The super duper BS LOGO](https://github.com/GavinKenna/BlockSmasherProject/raw/master/BlockSmasher/src/main/res/drawable-xxhdpi/blocksmasherlogo.png)
 
 Block Smasher is a clone of the popular block breaker games. The object of the game is to prevent the ball from falling 
 under your paddle, while also trying to destroy all of the bricks on screen. Along the way there will be gems and
@@ -25,3 +26,9 @@ Paddle.java - Contains the movement of the paddle. This is of course a subset of
 <br />
 
 Feel free to send me any emails if you would like to contact me for any reasons : Gavin.Kenna@ittd.ie
+
+
+Screenshots
+===
+![The super duper BS LOGO](http://i.imgur.com/V9ua7fW.png)
+![The super duper BS LOGO](http://i.imgur.com/xA9erhk.png)
