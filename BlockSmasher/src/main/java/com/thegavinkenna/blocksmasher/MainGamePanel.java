@@ -10,8 +10,11 @@ package com.thegavinkenna.blocksmasher;
 import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -31,6 +34,12 @@ public class MainGamePanel extends SurfaceView implements
 
 
     private MainGameThread thread;
+
+    private int fps = 0 ; //For calculating the fps.
+    private int elapsedTime = 0;
+    private int totalFrames = 0;
+    private long startTimeFPS = 0;
+    private long endTimeFPS = 0;
 
     /**
      *  Game entites
@@ -63,6 +72,7 @@ public class MainGamePanel extends SurfaceView implements
 
         super(context);
 
+
         getHolder().addCallback(this);
 
         thread = new MainGameThread(getHolder(),this);
@@ -72,6 +82,9 @@ public class MainGamePanel extends SurfaceView implements
 
     public void Init()
     {
+        bkgrnd = new Canvas();
+
+
         bricks = new ArrayList<Brick>();
         gems = new ArrayList<Gem>();
         paddle = new Paddle(BitmapFactory.decodeResource(getResources(),R.drawable.paddle),BitmapFactory.decodeResource(getResources(),R.drawable.paddlesmall),BitmapFactory.decodeResource(getResources(),R.drawable.paddlelong),this.getWidth() / 2 /*Centre of screen*/ , this.getHeight() - 40 /*Just a little off the ground*/,Color.GREEN);
@@ -163,11 +176,26 @@ public class MainGamePanel extends SurfaceView implements
         bg = BitmapFactory.decodeResource(getResources(),R.drawable.bbg);
         Bitmap s = bg.createScaledBitmap(bg, getWidth(), getHeight(), true);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        s.compress(Bitmap.CompressFormat.JPEG, 70, baos);
-        scaled = BitmapFactory.decodeByteArray(baos.toByteArray(), 0, baos.size());
+        s.compress(Bitmap.CompressFormat.JPEG, 90, baos);
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inDither = false;
+        options.inJustDecodeBounds = false;
+        options.inSampleSize = 1;
+        options.mCancel = false;
+        options.outHeight = getHeight();
+        options.outWidth = getWidth();
+
+        options.inPreferredConfig = Bitmap.Config.RGB_565;
+
+       // scaled = BitmapFactory.decodeByteArray(baos.toByteArray(), 0, baos.size());
+        scaled = BitmapFactory.decodeResource(getResources(), R.drawable.ndbg, options);
+        scaled = Bitmap.createScaledBitmap(scaled, getWidth(), getHeight(), false);
+
         /**
          * End of compression
          */
+
     }
 
 
@@ -225,16 +253,34 @@ public class MainGamePanel extends SurfaceView implements
     }
 
 
+
+    public void onDraw(Canvas c){
+        super.onDraw(c);
+        c.drawColor(Color.BLACK);
+        //Drawable d = getResources().getDrawable(R.drawable.bbg);
+        //d.setBounds(0,0,getWidth(),getHeight());
+       // setBackgroundResource(0);
+        //c.drawBitmap(scaled,0,0,null);
+    }
+
     Bitmap bg ;//= BitmapFactory.decodeResource(getResources(),R.drawable.bbg);
     Bitmap scaled;// = bg.createScaledBitmap(bg, getWidth(), getHeight(), true);
-
+    Canvas bkgrnd;
+    boolean firstTime=true;
     Thread renderThread = new Thread(){
         public void run(){
+            totalFrames++;
+
             Canvas canvas = getHolder().lockCanvas();
 
-            canvas.drawColor(Color.BLUE);
-            canvas.drawBitmap(scaled,0,0,null);
+            //canvas.drawBitmap(scaled,0,0,null);
+           // getHolder().unlockCanvasAndPost(canvas);
 
+            //canvas = getHolder().lockCanvas();
+            canvas.drawColor(Color.BLUE);
+            canvas.restore();
+            canvas.drawBitmap(scaled,0,0,null);
+//            bkgrnd.restore();
             paddle.draw(canvas);
 
             for(int i = 0; i < balls.length ; i++)
@@ -252,7 +298,15 @@ public class MainGamePanel extends SurfaceView implements
                 }
             }
 
+            Paint paint = new Paint();
+            paint.setColor(Color.BLACK);
+            paint.setStyle(Paint.Style.FILL);
+            paint.setTextSize(15);
+            canvas.drawText(String.valueOf(fps),10,10,paint );
+
+           // canvas.restore();
             getHolder().unlockCanvasAndPost(canvas);
+
         }
     };
 
@@ -260,6 +314,21 @@ public class MainGamePanel extends SurfaceView implements
     SurfaceView sv = this;
     Thread updateThread = new Thread(){
         public void run(){
+            endTimeFPS = System.currentTimeMillis();
+
+            if(startTimeFPS == 0){
+                startTimeFPS = System.currentTimeMillis();
+            }
+
+            elapsedTime+=(endTimeFPS/1000-startTimeFPS/1000);
+
+            if(elapsedTime>=1){
+                fps = totalFrames;
+                totalFrames = 0;
+                elapsedTime = 0;
+                startTimeFPS = 0;
+            }
+
             for(int i = 0; i < balls.length ; i++){
                 balls[i].update(sv, paddle, 5f, bricks);
             }

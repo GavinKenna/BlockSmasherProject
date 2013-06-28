@@ -4,6 +4,8 @@ package com.thegavinkenna.blocksmasher;
  * Created by Gavin on 24/06/13.
  */
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
@@ -29,6 +31,8 @@ public class MainActivity extends Activity{
         setContentView(new MainGamePanel(this));
         Log.d(UNIQUE_NAME, "View added");
     }
+
+
 
 
 }

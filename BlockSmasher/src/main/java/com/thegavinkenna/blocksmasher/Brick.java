@@ -1,6 +1,7 @@
 package com.thegavinkenna.blocksmasher;
 
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 
 /**
  * Created by Gavin on 25/06/13.
@@ -30,6 +31,9 @@ public class Brick extends Breakable {
             this.gem.SetAlive(true);
         }
     }
+
+    private boolean alreadyDrawn; // This is for speed. Draw only once
+
 
 
 

@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".StartMenuActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:textColor="#33b5e5"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:gravity="center"
+            />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="center"
+        android:background="@drawable/startbg">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+            style="@style/FullscreenActionBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:id="@+id/imageView"
+                android:layout_gravity="right|bottom"
+                android:background="@drawable/gavink"/>
+
+        <ImageButton
+                android:layout_width="222dp"
+                android:layout_height="94dp"
+                android:id="@+id/exitButton"
+                android:layout_gravity="left|bottom"
+                android:background="@drawable/exit"/>
+
+        <ImageButton
+                android:layout_width="222dp"
+                android:layout_height="107dp"
+                android:id="@+id/playButton"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/play"
+                android:clickable="true"/>
+    </FrameLayout>
+
+</FrameLayout>

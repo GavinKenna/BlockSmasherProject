@@ -4,58 +4,8 @@
     <dataSet config="main" >
         <source path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res" >
             <file
-                name="ball"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\ball.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="bbg"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\bbg.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="brick"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\brick.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="gem"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\gem.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
                 name="ic_launcher"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\ic_launcher.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="paddle"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\paddle.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="paddlelong"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\paddlelong.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="paddlesmall"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\paddlesmall.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="randgem"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\randgem.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="speedgem"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\speedgem.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="star"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\star.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
@@ -64,13 +14,93 @@
                 qualifiers="mdpi"
                 type="drawable" />
             <file
+                name="ball"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\ball.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="bbg"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\bbg.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
                 name="bg"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\bg.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
+                name="brick"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\brick.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="exit"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\exit.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="gavink"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\gavink.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="gem"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\gem.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="hdbg"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\hdbg.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ndbg"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\ndbg.bmp"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="paddle"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\paddle.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="paddlelong"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\paddlelong.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="paddlesmall"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\paddlesmall.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="play"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\play.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="randgem"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\randgem.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="speedgem"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\speedgem.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="star"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\star.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="startbg"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\startbg.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
@@ -84,10 +114,38 @@
                 qualifiers=""
                 type="layout" />
             <file
+                name="startmenu"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\layout\startmenu.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="startmenuactivity"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\layout\startmenuactivity.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="b"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\menu\b.xml"
                 qualifiers=""
                 type="menu" />
+            <file
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\values\attrs.xml"
+                qualifiers="" >
+                <declare-styleable name="ButtonBarContainerTheme" >
+                    <attr
+                        name="buttonBarStyle"
+                        format="reference" />
+                    <attr
+                        name="buttonBarButtonStyle"
+                        format="reference" />
+                </declare-styleable>
+            </file>
+            <file
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\values\colors.xml"
+                qualifiers="" >
+                <color name="black_overlay" >#66000000
+                </color>
+            </file>
             <file
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\values\dimens.xml"
                 qualifiers="" >
@@ -101,11 +159,17 @@
                 qualifiers="" >
                 <string name="action_settings" >Settings
                 </string>
+                <string name="title_activity_start_menu" >StartMenuActivity
+                </string>
                 <string name="app_name" >BlockSmasher
+                </string>
+                <string name="dummy_content" >DUMMY\nCONTENT
+                </string>
+                <string name="title_activity_b" >MainActivity
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
-                <string name="title_activity_b" >MainActivity
+                <string name="dummy_button" >Dummy Button
                 </string>
             </file>
             <file
@@ -122,6 +186,43 @@
             backward-compatibility can go here.
                     -->
                 </style>
+
+                <style name="ButtonBar" >
+                    <item name="android:paddingLeft">
+2dp
+                    </item>
+                    <item name="android:paddingTop">
+5dp
+                    </item>
+                    <item name="android:paddingRight">
+2dp
+                    </item>
+                    <item name="android:paddingBottom">
+0dp
+                    </item>
+                    <item name="android:background">
+@android:drawable/bottom_bar
+                    </item>
+                </style>
+
+                <style
+                    name="FullscreenTheme"
+                    parent="android:Theme.NoTitleBar" >
+                    <item name="android:windowContentOverlay">
+@null
+                    </item>
+                    <item name="android:windowBackground">
+@null
+                    </item>
+                    <item name="buttonBarStyle">
+@style/ButtonBar
+                    </item>
+                    <item name="buttonBarButtonStyle">
+@style/ButtonBarButton
+                    </item>
+                </style>
+
+                <style name="ButtonBarButton" />
 
                 <style
                     name="AppTheme"
@@ -142,6 +243,34 @@
             <file
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\values-v11\styles.xml"
                 qualifiers="v11" >
+
+                <style
+                    name="FullscreenTheme"
+                    parent="android:Theme.Holo" >
+                    <item name="android:actionBarStyle">
+@style/FullscreenActionBarStyle
+                    </item>
+                    <item name="android:windowActionBarOverlay">
+true
+                    </item>
+                    <item name="android:windowBackground">
+@null
+                    </item>
+                    <item name="buttonBarStyle">
+?android:attr/buttonBarStyle
+                    </item>
+                    <item name="buttonBarButtonStyle">
+?android:attr/buttonBarButtonStyle
+                    </item>
+                </style>
+
+                <style
+                    name="FullscreenActionBarStyle"
+                    parent="android:Widget.Holo.ActionBar" >
+                    <item name="android:background">
+@color/black_overlay
+                    </item>
+                </style>
 
                 <style
                     name="AppBaseTheme"
