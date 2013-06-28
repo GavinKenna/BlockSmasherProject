@@ -26,6 +26,9 @@ public class Ball extends Entity {
 
     private float xV; //X velocity
     private float yV;
+    private final float velocityMult = 2; //The multiplier for changing the speed of the ball, from the ball speed gem
+    private boolean fastBall;
+    private boolean slowBall;
 
     private int xD = DIRECTION_RIGHT; // xD => X Direction
     private int yD = DIRECTION_DOWN;
@@ -161,11 +164,61 @@ public class Ball extends Entity {
 
         HadCollision( bounds,  paddle ,  xVelocityFromPaddle ,bricks);
 
-
-
-
-
         this.update();
+    }
+
+    public boolean IsFast(){
+        return this.fastBall;
+    }
+
+    public boolean IsSlow(){
+        return slowBall;
+    }
+
+    public boolean IsNormalSpeed(){
+        return !(slowBall||fastBall);
+    }
+
+    public void SetFast(){
+        if(this.IsSlow()){
+            this.xV *= (this.velocityMult*2);
+            this.yV *= (this.velocityMult*2);
+        }
+
+        if(this.IsNormalSpeed()){
+            this.xV *= this.velocityMult;
+            this.yV *= this.velocityMult;
+        }
+        this.fastBall = true;
+        this.slowBall = false;
+    }
+
+    public void SetSlow(){
+        if(this.IsFast()){
+            this.xV /= (this.velocityMult*2);
+            this.yV /= (this.velocityMult*2);
+        }
+
+        if(this.IsNormalSpeed()){
+            this.xV /= this.velocityMult;
+            this.yV /= this.velocityMult;
+        }
+        this.fastBall = false;
+        this.slowBall = true;
+    }
+
+    public void SetNormal(){
+        if(this.IsFast()){
+            this.xV /= this.velocityMult;
+            this.yV /= this.velocityMult;
+        }
+
+        if(this.IsSlow()){
+            this.xV *= this.velocityMult;
+            this.yV *= this.velocityMult;
+        }
+        this.fastBall = false;
+        this.slowBall = false;
     }
 
 

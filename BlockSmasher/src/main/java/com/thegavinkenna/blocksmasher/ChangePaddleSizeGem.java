@@ -1,6 +1,7 @@
 package com.thegavinkenna.blocksmasher;
 
 import android.graphics.Bitmap;
+import android.view.SurfaceView;
 
 /**
  * Created by Gavin on 25/06/13.
@@ -35,7 +36,7 @@ public class ChangePaddleSizeGem extends Gem {
     /*
     * Caught gem logic here
     * */
-        super.Captured(paddle);
+        super.Captured();
          if(!paddleBigger){
             //make paddle smaller for certain time [15 seconds]
              if(!paddle.IsSmall() && IsCaptured()){
@@ -57,6 +58,15 @@ public class ChangePaddleSizeGem extends Gem {
         this.SetDead(true);
         this.SetCaptured(false);
         this.paddle.SetNormal();
+    }
+
+    public void update(SurfaceView bounds /*For bound checking, walls*/, Paddle paddle , Ball ball){
+        if(this.IsCaptured()){
+            this.Captured(paddle);
+        }
+        super.update(bounds,paddle,ball);
+
+
     }
 
 }

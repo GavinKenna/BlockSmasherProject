@@ -24,7 +24,9 @@ public final class R {
         public static final int paddle=0x7f020006;
         public static final int paddlelong=0x7f020007;
         public static final int paddlesmall=0x7f020008;
-        public static final int star=0x7f020009;
+        public static final int randgem=0x7f020009;
+        public static final int speedgem=0x7f02000a;
+        public static final int star=0x7f02000b;
     }
     public static final class id {
         public static final int action_settings=0x7f080000;

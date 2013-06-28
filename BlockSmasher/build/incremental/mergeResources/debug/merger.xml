@@ -44,6 +44,16 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="randgem"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\randgem.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="speedgem"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\speedgem.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="star"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\star.png"
                 qualifiers="hdpi"

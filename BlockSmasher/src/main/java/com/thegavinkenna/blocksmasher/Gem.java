@@ -64,9 +64,7 @@ public abstract class Gem extends Breakable {
           CheckCollisionBottom(bounds);
         }
 
-        if(captured){
-            Captured(paddle);
-        }else if(fallingGem == true && IsAlive()){
+        if(fallingGem == true && IsAlive()){
             this.setY(this.getY()+(int)velocity); //if the gem is meant to fall, let it fall with velocity. MAKE IT RAIN GEMS!
         }else{
             Bobble(); //Gonna write this method now. Bobble, make it slightly hover, give it life I guess.
@@ -141,7 +139,7 @@ public abstract class Gem extends Breakable {
         return this.captured;
     }
 
-    public  void Captured(Paddle paddle){
+    public  void Captured(){
         if(this.timeLasts!=-1){
             if(startTime==-1){
                 startTime = System.currentTimeMillis()/1000 + (long)timeLasts;

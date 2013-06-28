@@ -91,7 +91,8 @@ public class MainGamePanel extends SurfaceView implements
         int points = 0;
 
         Gem tempGem;
-        Bitmap gemBit = BitmapFactory.decodeResource(getResources(),R.drawable.gem);
+        Bitmap padGemBit = BitmapFactory.decodeResource(getResources(),R.drawable.gem);
+        Bitmap ballGemBit = BitmapFactory.decodeResource(getResources(),R.drawable.speedgem);
 
         for(int i = 0 ; i < level.length ; i++){
             for(int j = 0 ; j < level[i].length ; j++){
@@ -126,8 +127,22 @@ public class MainGamePanel extends SurfaceView implements
 
                     //Gen gems
                     if(Math.random() < 0.08){ //if true, add a gem to this brick
-                        tempGem = new ChangePaddleSizeGem(gemBit,  this.getLeftPaddingOffset() + brickBit.getWidth()/2 +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+
-                                ( brickBit.getHeight()*distance)) * i , col, 1,  1);
+                        tempGem = null;
+                        int rand =  0 + (int)(Math.random() * ((1 - 0) + 1));
+
+                        switch (rand){
+                            case 0:
+                                tempGem = new ChangePaddleSizeGem(padGemBit,  this.getLeftPaddingOffset() + brickBit.getWidth()/2 +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+
+                                        ( brickBit.getHeight()*distance)) * i , col, 1,  1);
+                                break;
+                            case 1:
+                                tempGem = new ChangeBallSpeedGem(ballGemBit,  this.getLeftPaddingOffset() + brickBit.getWidth()/2 +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+
+                                        ( brickBit.getHeight()*distance)) * i , col, 1,  1);
+                                break;
+                        }
+
+
+
                         gems.add(tempGem);
                 }else{
                         tempGem = null;
