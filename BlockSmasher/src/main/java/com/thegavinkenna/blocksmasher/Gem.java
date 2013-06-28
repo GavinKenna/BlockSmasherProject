@@ -58,9 +58,11 @@ public abstract class Gem extends Breakable {
     }
 
     public void update(SurfaceView bounds /*For bound checking, walls*/, Paddle paddle , Ball ball){
-        CheckCollisionBall(ball);
-        CheckCollisionPaddle(paddle);
-        CheckCollisionBottom(bounds);
+        if(!captured){
+          CheckCollisionBall(ball);
+          CheckCollisionPaddle(paddle);
+          CheckCollisionBottom(bounds);
+        }
 
         if(captured){
             Captured(paddle);
@@ -142,9 +144,11 @@ public abstract class Gem extends Breakable {
     public  void Captured(Paddle paddle){
         if(this.timeLasts!=-1){
             if(startTime==-1){
-                startTime = System.currentTimeMillis()/1000;
+                startTime = System.currentTimeMillis()/1000 + (long)timeLasts;
             }else{
-                if((System.currentTimeMillis()/1000) - timeLasts <= 0){
+                long time = (System.currentTimeMillis()/1000);
+
+                if(time >= startTime ){
                     //time up
                     TimeUp();
                 }

@@ -125,7 +125,7 @@ public class MainGamePanel extends SurfaceView implements
                     bricks.add(tempBrick);
 
                     //Gen gems
-                    if(Math.random() < 0.2){ //if true, add a gem to this brick
+                    if(Math.random() < 0.08){ //if true, add a gem to this brick
                         tempGem = new ChangePaddleSizeGem(gemBit,  this.getLeftPaddingOffset() + brickBit.getWidth()/2 +  (brickBit.getWidth()*distance) * j,(this.getTopPaddingOffset()+
                                 ( brickBit.getHeight()*distance)) * i , col, 1,  1);
                         gems.add(tempGem);
@@ -261,7 +261,7 @@ public class MainGamePanel extends SurfaceView implements
             }
 
             for(int i = 0; i < gems.size(); i ++){
-                if(gems.get(i).IsAlive()){
+                if(gems.get(i).IsAlive() || gems.get(i).IsCaptured() ){
                   gems.get(i).update(sv, paddle, balls[0]); //change to list of balls
                 }
                 if(gems.get(i).IsDead())
