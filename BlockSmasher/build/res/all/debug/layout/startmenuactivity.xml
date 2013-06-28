@@ -24,7 +24,7 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         android:layout_gravity="center"
-        android:background="@drawable/startbg">
+        android:background="@drawable/sm">
 
         <LinearLayout android:id="@+id/fullscreen_content_controls"
             style="@style/FullscreenActionBarStyle"

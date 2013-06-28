@@ -9,6 +9,11 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="sm"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-hdpi\sm.bmp"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-mdpi\ic_launcher.png"
                 qualifiers="mdpi"
@@ -99,23 +104,18 @@
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
-                name="startbg"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\startbg.png"
-                qualifiers="xhdpi"
-                type="drawable" />
-            <file
                 name="ic_launcher"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xxhdpi\ic_launcher.png"
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="startbg"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xxhdpi\startbg.jpg"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
                 name="activityb"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\layout\activityb.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="startmenu"
-                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\layout\startmenu.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -165,27 +165,16 @@
                 </string>
                 <string name="dummy_content" >DUMMY\nCONTENT
                 </string>
-                <string name="title_activity_b" >MainActivity
+                <string name="dummy_button" >Dummy Button
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
-                <string name="dummy_button" >Dummy Button
+                <string name="title_activity_b" >MainActivity
                 </string>
             </file>
             <file
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\values\styles.xml"
                 qualifiers="" >
-
-                <style
-                    name="AppBaseTheme"
-                    parent="android:Theme.Light" >
-
-                    <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-                    -->
-                </style>
 
                 <style name="ButtonBar" >
                     <item name="android:paddingLeft">
@@ -203,6 +192,17 @@
                     <item name="android:background">
 @android:drawable/bottom_bar
                     </item>
+                </style>
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
                 </style>
 
                 <style
