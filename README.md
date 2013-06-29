@@ -30,5 +30,12 @@ Feel free to send me any emails if you would like to contact me for any reasons 
 
 Screenshots
 ===
-![The super duper BS LOGO](http://i.imgur.com/V9ua7fW.png)
+<h2>The main menu screen.</h2>
+![The super duper BS LOGO](http://i.imgur.com/4a925gI.png)
+<h2>Main playing screen (before HUD update).</h2>
 ![The super duper BS LOGO](http://i.imgur.com/xA9erhk.png)
+<h2>Main playing screen on PreGame GameState.</h2>
+Notice the HUD and the ability to 'fling' the ball in any direction.
+![The super duper BS LOGO](http://i.imgur.com/5UuUptZ.png)
+<h2>Another image of the game in play, after a life has been lost.</h2>
+![The super duper BS LOGO](http://i.imgur.com/sl7tgtS.png)
