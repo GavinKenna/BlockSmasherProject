@@ -63,6 +63,8 @@ public abstract class Entity {
 
     public void setColour(int col){
         paint = new Paint(col);
+        ColorFilter filter = new LightingColorFilter(col, 1);
+        paint.setColorFilter(filter);
     }
 
     public void draw(Canvas canvas){

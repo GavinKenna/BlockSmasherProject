@@ -32,6 +32,11 @@ import java.util.List;
 public class MainGamePanel extends SurfaceView implements
         SurfaceHolder.Callback {
 
+    public enum GAMESTATE {
+        PreGame,
+        Playing,
+        Paused
+    };
 
     private MainGameThread thread;
 
@@ -50,6 +55,10 @@ public class MainGamePanel extends SurfaceView implements
     private Ball[] balls = new Ball[1]; //Will be made into an array soon, so that there can be loads of ball on scren at once when a certain gem is hit.
     private java.util.List<Brick> bricks;
     private java.util.List<Gem> gems;
+    private HUD hud;
+
+    private GAMESTATE gs;
+
 
     private char[][]level = new char[][]{
         {' ',' ',' ',' ',' ',' ',' ',' ', ' ',' ',' ',' ',' ',' ',' ',' ', ' '},
@@ -82,6 +91,8 @@ public class MainGamePanel extends SurfaceView implements
 
     public void Init()
     {
+        gs = GAMESTATE.PreGame;
+
         bkgrnd = new Canvas();
 
 
@@ -196,6 +207,8 @@ public class MainGamePanel extends SurfaceView implements
          * End of compression
          */
 
+        hud = new HUD(BitmapFactory.decodeResource(getResources(),R.drawable.life),0,getHeight()-40, paddle);
+
     }
 
 
@@ -224,22 +237,50 @@ public class MainGamePanel extends SurfaceView implements
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (event.getAction() == MotionEvent.ACTION_DOWN) {
-            //Finger touching game, do something
-            //Add in update stuff here when ready
-            paddle.HandleActionDown((int)event.getX(), (int)event.getY());
-        }
-        if (event.getAction() == MotionEvent.ACTION_MOVE) {
-            if (paddle.IsTouched()) {
-                // paddle is picked, and now to drag it
-                paddle.setX((int)event.getX());
+        if(gs == GAMESTATE.Playing){
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                //Finger touching game, do something
+                //Add in update stuff here when ready
+                paddle.HandleActionDown((int)event.getX(), (int)event.getY());
             }
-        } if (event.getAction() == MotionEvent.ACTION_UP) {
-            // touch was released
-            if (paddle.IsTouched()) {
-                paddle.SetTouched(false);
+            if (event.getAction() == MotionEvent.ACTION_MOVE) {
+                if (paddle.IsTouched()) {
+                    // paddle is picked, and now to drag it
+                    paddle.setX((int)event.getX());
+                }
+            } if (event.getAction() == MotionEvent.ACTION_UP) {
+                // touch was released
+                if (paddle.IsTouched()) {
+                    paddle.SetTouched(false);
+                }
             }
         }
+
+        if(gs == GAMESTATE.PreGame){
+            //When flinging the ball
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                //Finger touching game, do something
+                //Add in update stuff here when ready
+                balls[0].HandleActionDown((int)event.getX(), (int)event.getY());
+            }
+            if (event.getAction() == MotionEvent.ACTION_MOVE) {
+                if (balls[0].IsTouched()) {
+                    // paddle is picked, and now to drag it
+                    //balls[0].setX((int)event.getX());
+                }
+            } if (event.getAction() == MotionEvent.ACTION_UP) {
+                // touch was released
+                if (balls[0].IsTouched()) {
+                    balls[0].SetTouched(false);
+                    balls[0].HandleDirection((int)event.getX(), (int)event.getY());
+
+                }
+
+                gs = GAMESTATE.Playing;
+            }
+        }
+
+
         return true;
     }
 
@@ -304,6 +345,13 @@ public class MainGamePanel extends SurfaceView implements
             paint.setTextSize(15);
             canvas.drawText(String.valueOf(fps),10,10,paint );
 
+            if(gs == GAMESTATE.PreGame){
+                paint.setTextSize(40);
+                paint.setColor(Color.BLACK);
+                canvas.drawText(String.valueOf("FLING THE BALL TO START. WOOO!"),(sv.getWidth()/2)-300,sv.getHeight()/2,paint );
+            }
+            hud.draw(canvas);
+
            // canvas.restore();
             getHolder().unlockCanvasAndPost(canvas);
 
@@ -314,45 +362,65 @@ public class MainGamePanel extends SurfaceView implements
     SurfaceView sv = this;
     Thread updateThread = new Thread(){
         public void run(){
-            endTimeFPS = System.currentTimeMillis();
 
-            if(startTimeFPS == 0){
-                startTimeFPS = System.currentTimeMillis();
+            if(gs == GAMESTATE.PreGame){
+                balls[0].setX(sv.getWidth() / 2 /*Centre of screen*/ );
+                balls[0].setY(sv.getHeight() - 90);
             }
 
-            elapsedTime+=(endTimeFPS/1000-startTimeFPS/1000);
+            if(gs == GAMESTATE.Playing){
+                if(!balls[0].IsAlive()){
+                    //If the ball dies
+                    paddle.RemoveLife();
+                    balls[0].SetAlive(true);
+                    gs = GAMESTATE.PreGame;
+                }
+                endTimeFPS = System.currentTimeMillis();
 
-            if(elapsedTime>=1){
-                fps = totalFrames;
-                totalFrames = 0;
-                elapsedTime = 0;
-                startTimeFPS = 0;
-            }
+                if(startTimeFPS == 0){
+                    startTimeFPS = System.currentTimeMillis();
+                }
 
-            for(int i = 0; i < balls.length ; i++){
-                balls[i].update(sv, paddle, 5f, bricks);
-            }
+                elapsedTime+=(endTimeFPS/1000-startTimeFPS/1000);
 
-            for(int i = 0; i < bricks.size(); i ++){
-                bricks.get(i).update();
-                if(!bricks.get(i).IsAlive())
-                {
-                    if(bricks.get(i).GetGem()!=null){
-                        bricks.get(i).GetGem().SetAlive(true);
+                if(elapsedTime>=1){
+                    fps = totalFrames;
+                    totalFrames = 0;
+                    elapsedTime = 0;
+                    startTimeFPS = 0;
+                }
+
+                for(int i = 0; i < balls.length ; i++){
+                    balls[i].update(sv, paddle, 5f, bricks);
+                }
+
+                for(int i = 0; i < bricks.size(); i ++){
+                    bricks.get(i).update();
+                    if(!bricks.get(i).IsAlive())
+                    {
+                        if(bricks.get(i).GetGem()!=null){
+                            bricks.get(i).GetGem().SetAlive(true);
+                        }
+                        paddle.IncreaseScore(bricks.get(i).Points());
+                        bricks.remove(i);
                     }
-                    bricks.remove(i);
                 }
+
+                for(int i = 0; i < gems.size(); i ++){
+                    if(gems.get(i).IsAlive() || gems.get(i).IsCaptured() ){
+                        gems.get(i).update(sv, paddle, balls[0]); //change to list of balls
+                    }
+                    if(gems.get(i).IsDead())
+                    {
+                        paddle.IncreaseScore(gems.get(i).Points());
+                        gems.remove(i);
+                    }
+                }
+
+                hud.update();
             }
 
-            for(int i = 0; i < gems.size(); i ++){
-                if(gems.get(i).IsAlive() || gems.get(i).IsCaptured() ){
-                  gems.get(i).update(sv, paddle, balls[0]); //change to list of balls
-                }
-                if(gems.get(i).IsDead())
-                {
-                    gems.remove(i);
-                }
-            }
+
         }
 
     };

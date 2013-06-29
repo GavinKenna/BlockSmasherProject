@@ -64,6 +64,11 @@
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
+                name="life"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\life.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
                 name="ndbg"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\ndbg.bmp"
                 qualifiers="xhdpi"
@@ -102,6 +107,11 @@
                 name="star"
                 path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xhdpi\star.png"
                 qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="blocksmasherlogo"
+                path="C:\Users\Gavin\AndroidStudioProjects\BlockSmasherProject\BlockSmasher\src\main\res\drawable-xxhdpi\blocksmasherlogo.png"
+                qualifiers="xxhdpi"
                 type="drawable" />
             <file
                 name="ic_launcher"

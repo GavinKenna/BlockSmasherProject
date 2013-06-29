@@ -12,7 +12,9 @@ import android.graphics.Rect;
  */
 public class Paddle extends Entity {
 
-    private int score;
+    private int score; //Players score
+    private int livesLeft = 3;
+
     private boolean touched; //Is the paddle being touched?
     private boolean large; //Is it large?
     private boolean small;//Is it small?
@@ -36,6 +38,22 @@ public class Paddle extends Entity {
         this.setColour(col);
         this.score = 0;
         this.touched = false;
+    }
+
+    public int GetLivesLeft(){
+        return this.livesLeft;
+    }
+
+    public void RemoveLife(){
+        this.livesLeft--;
+    }
+
+    public int GetScore(){
+        return this.score;
+    }
+
+    public void IncreaseScore(int s){
+        this.score+=s;
     }
 
     public boolean IsTouched(){

@@ -23,9 +23,11 @@ public class Ball extends Entity {
     public static final int DIRECTION_UP = -1;
     public static final int DIRECTION_DOWN = 1;
 
+    private boolean touched; //Is the ball being touched?
 
     private float xV; //X velocity
     private float yV;
+    private float defaultVelocity; //For when restarting velocity
     private final float velocityMult = 2; //The multiplier for changing the speed of the ball, from the ball speed gem
     private boolean fastBall;
     private boolean slowBall;
@@ -41,6 +43,7 @@ public class Ball extends Entity {
 
         this.xV = xV;
         this.yV = yV;
+        this.defaultVelocity = xV;
         alive = true;
     }
 
@@ -49,6 +52,7 @@ public class Ball extends Entity {
 
         this.xV = xV;
         this.yV = yV;
+        this.defaultVelocity = xV;
         alive = true;
     }
 
@@ -219,6 +223,77 @@ public class Ball extends Entity {
         }
         this.fastBall = false;
         this.slowBall = false;
+    }
+
+    public boolean IsTouched(){
+        return touched;
+    }
+
+    public void SetTouched(boolean t){
+        touched = t;
+    }
+
+    public void SetXV(float xv){
+        this.xV = xv;
+    }
+
+    public void SetYV(float yv){
+        this.yV = yv;
+    }
+
+    public float GetXV(){
+        return this.xV;
+    }
+
+    public float GetYV(){
+        return this.yV;
+    }
+
+
+    private int startTouchX, startTouchY; //This is used to calculate the fling of the finger
+    public void HandleActionDown(int eventX, int eventY)
+    {
+        SetTouched(true);
+        this.startTouchX  =eventX;
+        this.startTouchY = eventY;
+    }
+
+    public void HandleDirection(int eventX, int eventY){
+
+        if(eventX <= startTouchX){
+            this.xD = DIRECTION_LEFT;
+        }else if(eventX > startTouchX){
+            this.xD = DIRECTION_RIGHT;
+        }
+
+        if(eventY <= startTouchY){
+            this.yD = DIRECTION_UP;
+        }else if(eventY > startTouchY){
+            this.yD = DIRECTION_DOWN;
+        }
+
+        float xN = Math.abs(startTouchX-eventX);
+        float yN = Math.abs(startTouchY - eventY);
+
+        if(xN > yN){
+            SetXV(1 * defaultVelocity);
+            SetYV(yN/xN * defaultVelocity);
+        }else if(xN < yN){
+            SetXV( xN/yN * defaultVelocity);
+            SetYV(1 * defaultVelocity);
+        }else{
+            SetYV(1 * defaultVelocity);
+            SetXV(1 * defaultVelocity);
+        }
+
+        //reset startTouches
+        startTouchY = 0;
+        startTouchX = 0;
+
+    }
+
+    public void SetAlive(boolean a){
+        this.alive = a;
     }
 
 
