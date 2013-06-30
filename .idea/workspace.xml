@@ -23,15 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c0ef78b-4a8b-4d74-9a91-19bddd89dab1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/HUD.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/res/drawable-xhdpi/Thumbs.db" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/res/drawable-xhdpi/Thumbs.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Ball.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/Paddle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/build/source/r/debug/com/thegavinkenna/blocksmasher/R.java" afterPath="$PROJECT_DIR$/BlockSmasher/build/source/r/debug/com/thegavinkenna/blocksmasher/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/StartMenuActivity.java" afterPath="$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/StartMenuActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="a1124af5-ddb3-4ed2-845c-bccecd0abca4" name="Failed commit: Default" comment="Basic movement down. More to work on. Plan on changing how paddle is used. Instead of touching it and then moving, change it so that user can touch anywhere on screen to move it. Next up is adding bricks and ball to test some collision." />
@@ -168,7 +159,7 @@
       <file leaf-file-name="MainGamePanel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="349" column="42" selection-start="12166" selection-end="12166" vertical-scroll-proportion="3.5511596" vertical-offset="2990" max-vertical-offset="7038">
+            <state line="222" column="5" selection-start="8072" selection-end="8072" vertical-scroll-proportion="0.6289222" vertical-offset="2990" max-vertical-offset="7038">
               <folding />
             </state>
           </provider>
@@ -214,7 +205,9 @@
         <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="28" column="117" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -859,7 +852,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -878,7 +871,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.798441" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17342582" sideWeight="0.8596882" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1403118" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1403118" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -997,7 +990,9 @@
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="117" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1059,7 +1054,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BlockSmasher/src/main/java/com/thegavinkenna/blocksmasher/MainGamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="349" column="42" selection-start="12166" selection-end="12166" vertical-scroll-proportion="3.5511596" vertical-offset="2990" max-vertical-offset="7038">
+        <state line="222" column="5" selection-start="8072" selection-end="8072" vertical-scroll-proportion="0.6289222" vertical-offset="2990" max-vertical-offset="7038">
           <folding />
         </state>
       </provider>
